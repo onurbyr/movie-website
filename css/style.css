@@ -15,6 +15,18 @@ a {
     text-decoration: none;
 }
 
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+body {
+    display: flex;
+}
 
 header {
     width: 250px;
@@ -24,6 +36,10 @@ header {
     color: white;
 }
 
+.burger {
+    display: none;
+    cursor: pointer;
+}
 
 header img {
     width: 50px;
@@ -37,25 +53,111 @@ nav h2 {
     color: #8A8A8A;
 }
 
-header ul {
+.nav-links {
     list-style-type: none;
     margin-top: 20px;
 }
 
-header ul li {
+.nav-links li {
     margin-top: 20px;
 }
 
-header i,
+.nav-links i,
 a {
     color: #dadada;
     font-size: 1.1rem;
+}
+
+.nav-links a {
     margin-left: 10px;
 }
 
 .active-link * {
     color: #159FFF;
 }
-.active-link  {
+
+.active-link {
     border-right: 3px solid #159FFF;
+}
+
+/* ---Mobile Nav */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #030303;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.overlay-active {
+    width: 100%;
+}
+
+.overlay-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #159FFF;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+}
+
+/* Mobile Nav ---*/
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header * {
+        display: none;
+    }
+
+    header {
+        height: 10vh;
+        background-color: initial;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger i {
+        font-size: 2rem;
+    }
 }
