@@ -9,3 +9,16 @@ menuOpen.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay-active");
 });
+
+const navLinks = document.querySelectorAll(".nav-links li");
+navLinks.forEach((selectedElement) => {
+  selectedElement.addEventListener("click", () => {
+    navLinks.forEach((element) => {
+      if (element === selectedElement) {
+        element.classList.add("active-link");
+      } else {
+        element.classList.remove("active-link");
+      }
+    });
+  });
+});
