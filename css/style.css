@@ -34,6 +34,9 @@ body {
     --header-width: 250px;
     --header-padding: 20px 0px 20px 25px;
     --header-padding-mobile: 20px 25px;
+    --slider-text-margin-top: -90px;
+    --slider-text-font-size: 2rem;
+    --slider-text-padding-left: 12px;
 }
 
 header {
@@ -180,7 +183,7 @@ a,
 
 .mySlides img {
     vertical-align: middle;
-    padding: 0 20%;
+    padding: 0 25%;
 }
 
 /* Slideshow container */
@@ -188,6 +191,17 @@ a,
     max-width: 100%;
     position: relative;
     margin: auto;
+    background-image: url("/images/slider-bg.jpg");
+    background-position: center;
+}
+
+/* Caption text */
+.slider-text {
+    font-size: var(--slider-text-font-size);
+    padding-left: var(--slider-text-padding-left);
+    margin-top: var(--slider-text-margin-top);
+    position: absolute;
+    color: #ffffff;
 }
 
 /* Next & previous buttons */
@@ -221,13 +235,15 @@ a,
 
 /* The dots/bullets/indicators */
 .dot-container {
-    text-align: center;
+    padding: var(--slider-text-font-size) var(--slider-text-padding-left);
+    position: absolute;
+    margin-top: var(--slider-text-margin-top);
 }
 
 .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: calc(var(--slider-text-font-size) / 2);
+    width: calc(var(--slider-text-font-size) / 2);
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
@@ -248,7 +264,7 @@ a,
 
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: .6
     }
 
     to {
@@ -304,5 +320,14 @@ a,
     main {
         margin-left: 0px;
         margin-top: var(--mobile-header-height);
+    }
+
+    .mySlides img {
+        padding: 0;
+    }
+
+    :root {
+        --slider-text-font-size: 1.5rem;
+        --slider-text-padding-left: 10%;
     }
 }
