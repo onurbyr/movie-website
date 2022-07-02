@@ -12,6 +12,7 @@
     ></script>
   </head>
   <body>
+    <!-- header  -->
     <header>
       <div class="mobile-nav">
         <button class="burger">
@@ -59,7 +60,9 @@
         </div>
       </div>
     </div>
+    <!-- end header -->
     <main>
+      <!-- slider  -->
       <div class="slideshow-container">
         <div class="mySlides fade">
           <img src="./images/slider1.jpg" style="width: 100%" />
@@ -70,10 +73,14 @@
           <div class="slider-text">Dune</div>
         </div>
         <div class="mySlides fade">
-          <img src="./images/slider3.jpg" style="width: 100%" />
-          <div class="slider-text">Jurassic World</div>
+          <!-- added crossorigin="anonymous" for color-thief(getting dominant color for background) -->
+          <img
+            src="https://image.tmdb.org/t/p/w1280/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg"
+            crossorigin="anonymous"
+            style="width: 100%"
+          />
+          <div class="slider-text">Spider-Man: No Way Home</div>
         </div>
-
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
       </div>
@@ -83,10 +90,11 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
+      <!-- end slider  -->
       <div>asd</div>
       <div>asd</div>
     </main>
 
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
