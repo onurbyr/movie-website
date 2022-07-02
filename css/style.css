@@ -3,7 +3,7 @@
 
 * {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
     color: white;
 }
@@ -26,7 +26,6 @@ button {
 }
 
 body {
-    display: flex;
     background-color: #121317;
 }
 
@@ -295,7 +294,8 @@ a {
         padding: var(--header-padding-mobile);
     }
 
-    body {
+    .home-container {
+        display: flex;
         flex-direction: column;
     }
 
@@ -326,5 +326,11 @@ a {
     :root {
         --slider-text-font-size: 1.5rem;
         --slider-text-padding-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .mySlides img {
+        padding: 0;
     }
 }

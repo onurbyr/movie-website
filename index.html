@@ -12,88 +12,88 @@
     ></script>
   </head>
   <body>
-    <!-- header  -->
-    <header>
-      <div class="mobile-nav">
-        <button class="burger">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="search-container">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Search.." name="search" />
+    <div class="home-container">
+      <!-- header  -->
+      <header>
+        <div class="mobile-nav">
+          <button class="burger">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search.." name="search" />
+          </div>
         </div>
-      </div>
-
-      <img src="./images/video.png" alt="" />
-      <nav>
-        <h2>Browse</h2>
-        <ul class="nav-links">
-          <li class="active-link">
+        <img src="./images/video.png" alt="" />
+        <nav>
+          <h2>Browse</h2>
+          <ul class="nav-links">
+            <li class="active-link">
+              <i class="fa-solid fa-video"></i>
+              <a href="#">Movies</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-tv"></i>
+              <a href="#">Tv Series</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-users"></i>
+              <a href="#">People</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="mobile-menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay-content">
+          <div>
             <i class="fa-solid fa-video"></i>
             <a href="#">Movies</a>
-          </li>
-          <li>
+          </div>
+          <div>
             <i class="fa-solid fa-tv"></i>
-            <a href="#">Tv Series</a>
-          </li>
-          <li>
+            <a href="#">TvSeries</a>
+          </div>
+          <div>
             <i class="fa-solid fa-users"></i>
             <a href="#">People</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div id="mobile-menu" class="overlay">
-      <a class="close">&times;</a>
-      <div class="overlay-content">
-        <div>
-          <i class="fa-solid fa-video"></i>
-          <a href="#">Movies</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-tv"></i>
-          <a href="#">TvSeries</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-users"></i>
-          <a href="#">People</a>
+          </div>
         </div>
       </div>
+      <!-- end header -->
+      <main>
+        <!-- slider  -->
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="./images/slider1.jpg" />
+            <div class="slider-text">Interstellar</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="./images/slider2.jpg" />
+            <div class="slider-text">Dune</div>
+          </div>
+          <div class="mySlides fade">
+            <!-- added crossorigin="anonymous" for color-thief(getting dominant color for background) -->
+            <img
+              src="https://image.tmdb.org/t/p/w1280/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg"
+              crossorigin="anonymous"
+            />
+            <div class="slider-text">Spider-Man: No Way Home</div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br />
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <!-- end slider  -->
+        <div>asd</div>
+        <div>asd</div>
+      </main>
     </div>
-    <!-- end header -->
-    <main>
-      <!-- slider  -->
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <img src="./images/slider1.jpg" />
-          <div class="slider-text">Interstellar</div>
-        </div>
-        <div class="mySlides fade">
-          <img src="./images/slider2.jpg" />
-          <div class="slider-text">Dune</div>
-        </div>
-        <div class="mySlides fade">
-          <!-- added crossorigin="anonymous" for color-thief(getting dominant color for background) -->
-          <img
-            src="https://image.tmdb.org/t/p/w1280/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg"
-            crossorigin="anonymous"
-          />
-          <div class="slider-text">Spider-Man: No Way Home</div>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-      </div>
-      <br />
-      <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-      <!-- end slider  -->
-      <div>asd</div>
-      <div>asd</div>
-    </main>
-
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
