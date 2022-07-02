@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
+    color: white;
 }
 
 *:not(i):not(.fa) {
@@ -26,6 +27,7 @@ button {
 
 body {
     display: flex;
+    background-color: #121317;
 }
 
 
@@ -44,7 +46,6 @@ header {
     height: 100vh;
     background-color: #030303;
     padding: var(--header-padding);
-    color: white;
     position: fixed
 }
 
@@ -99,9 +100,7 @@ nav h2 {
 }
 
 .nav-links i,
-a,
-.burger {
-    color: #dadada;
+a {
     font-size: 1.1rem;
 }
 
@@ -148,7 +147,6 @@ a,
 }
 
 .overlay-content i {
-    color: #dadada;
     font-size: 36px;
 }
 
@@ -184,6 +182,7 @@ a,
 .mySlides img {
     vertical-align: middle;
     padding: 0 25%;
+    width: 100%;
 }
 
 /* Slideshow container */
@@ -199,7 +198,7 @@ a,
     padding-left: var(--slider-text-padding-left);
     margin-top: var(--slider-text-margin-top);
     position: absolute;
-    color: #ffffff;
+    font-weight: 600;
 }
 
 /* Next & previous buttons */

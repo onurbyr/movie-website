@@ -1,5 +1,5 @@
 import ColorThief from "./color-thief.mjs"; //Component for getting dominant color of image
-//Header
+//---Header
 const menuOpen = document.querySelector(".burger");
 const menuClose = document.querySelector(".close");
 const overlay = document.querySelector(".overlay");
@@ -24,7 +24,7 @@ navLinks.forEach((selectedElement) => {
     });
   });
 });
-//Header
+//Header---
 
 //Get dominant color
 const colorThief = new ColorThief();
@@ -40,7 +40,7 @@ const getDominantColor = (img) => {
 };
 //Get dominant color
 
-//Slider
+//---Slider
 let slideIndex = 1;
 window.plusSlides = (n) => {
   showSlides((slideIndex += n));
@@ -81,6 +81,6 @@ showSlides(slideIndex);
 // Run every each 2 seconds
 setInterval(() => {
   plusSlides(1);
-}, 2000);
+}, 3000);
 
-//Slider
+//Slider---
