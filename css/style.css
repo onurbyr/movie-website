@@ -278,16 +278,50 @@ a {
 /* Slider--- */
 
 /* ---Custom Scrollbar */
+.trending {
+    margin: 2vh 0 0 2%;
+}
+
+.upper-scrollbar {
+    margin: 2vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upper-scrollbar-right {
+    display: flex;
+}
+
+.upper-scrollbar-right a {
+    margin: 0 0.5rem;
+    color: #8D8D8B;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.upper-scrollbar-right a:hover,
+.upper-scrollbar-right a:focus {
+    color: #159FFF;
+}
+
 .custom-scrollbar {
     display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
     align-items: center;
+    --title-margin: 1rem;
+    --title-fontsize: 1rem;
+    --rating-fontsize: 16px;
 }
 
 .custom-scrollbar button {
-    font-size: 32px;
     position: absolute;
+    /* setting arrow position */
+    margin-top: calc(-1 * ((2 * var(--title-margin)) + var(--title-fontsize) + var(--rating-fontsize)));
+}
+
+.custom-scrollbar button i {
+    font-size: 2rem;
 }
 
 #left-scroll {
@@ -300,8 +334,32 @@ a {
 }
 
 .info-box {
-    width: 200px;
-    height: 200px
+    flex: 0 0 150px;
+    margin-right: 5%;
+    text-align: center;
+    /* added ... if more than one line  */
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.home-scrollbar-title {
+    margin: var(--title-margin) 0;
+    font-size: var(--title-fontsize);
+    /* added ... if more than one line  */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.home-scrollbar-rating {
+    color: #8D8D8B;
+    font-size: var(--rating-fontsize);
+}
+
+.info-box img {
+    width: 100%;
 }
 
 /* Custom Scrollbar--- */
@@ -319,6 +377,10 @@ a {
 }
 
 @media only screen and (max-width: 800px) {
+    html {
+        font-size: 14px;
+    }
+
     header * {
         display: none;
     }
@@ -366,6 +428,10 @@ a {
     :root {
         --slider-text-font-size: 1.5rem;
         --slider-text-padding-left: 10%;
+    }
+
+    .info-box {
+        flex: 0 0 100px;
     }
 }
 
