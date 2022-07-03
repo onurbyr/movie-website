@@ -84,3 +84,14 @@ setInterval(() => {
 }, 3000);
 
 //Slider---
+
+//---Custom Scrollbar
+const customScrollbar = document.querySelector(".custom-scrollbar");
+window.leftScroll = () => {
+  customScrollbar.scrollLeft -= 300;
+};
+
+window.rightScroll = () => {
+  customScrollbar.scrollLeft += 300;
+};
+//Custom Scrollbar---
