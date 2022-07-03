@@ -33,7 +33,7 @@ body {
 :root {
     --mobile-header-height: 80px;
     --header-width: 250px;
-    --header-padding: 20px 0px 20px 25px;
+    --header-padding: 0px 0px 0px 25px;
     --header-padding-mobile: 20px 25px;
     --slider-text-margin-top: -90px;
     --slider-text-font-size: 2rem;
@@ -66,6 +66,10 @@ main {
     color: #C0C0BF;
 }
 
+.search-container i {
+    color: #C0C0BF;
+}
+
 .search-container input {
     margin-left: 10px;
     background-color: transparent;
@@ -78,11 +82,8 @@ main {
 
 
 header img {
-    width: 50px;
-}
-
-nav {
-    margin: 3vh 0;
+    width: 42px;
+    margin: 30px 0 20px 0;
 }
 
 nav h2 {
@@ -174,6 +175,13 @@ a {
 
 
 /* ---Slider */
+.search-in-slider {
+    width: 220px;
+    margin: 20px 40px;
+    position: absolute;
+    z-index: 1;
+}
+
 .mySlides {
     display: none;
 }
@@ -317,6 +325,10 @@ a {
     main {
         margin-left: 0px;
         margin-top: var(--mobile-header-height);
+    }
+
+    .search-in-slider {
+        display: none;
     }
 
     .mySlides img {
