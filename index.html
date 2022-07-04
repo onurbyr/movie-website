@@ -29,6 +29,10 @@
           <h2>Browse</h2>
           <ul class="nav-links">
             <li class="active-link">
+              <i class="fa-solid fa-layer-group"></i>
+              <a href="#">Discover</a>
+            </li>
+            <li>
               <i class="fa-solid fa-video"></i>
               <a href="#">Movies</a>
             </li>
@@ -46,6 +50,10 @@
       <div id="mobile-menu" class="overlay">
         <a class="close">&times;</a>
         <div class="overlay-content">
+          <div>
+            <i class="fa-solid fa-layer-group"></i>
+            <a href="#">Discover</a>
+          </div>
           <div>
             <i class="fa-solid fa-video"></i>
             <a href="#">Movies</a>
@@ -94,7 +102,8 @@
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
         <!-- end slider  -->
-        <div class="trending">
+        <!-- custom scrollbar  -->
+        <div class="custom-scrollbar-container">
           <div class="upper-scrollbar">
             <h3>Trending</h3>
             <div class="upper-scrollbar-right">
@@ -104,57 +113,155 @@
               <a href="#"> People </a>
             </div>
           </div>
-          <div class="custom-scrollbar">
-            <button id="left-scroll" onclick="leftScroll()">
+          <div id="custom-scrollbar-trending" class="custom-scrollbar">
+            <button id="left-scroll" onclick="scrollLeftTrending()">
               <i class="fa-solid fa-angle-left"></i>
             </button>
-            <button id="right-scroll" onclick="rightScroll()">
+            <button id="right-scroll" onclick="scrollRightTrending()">
               <i class="fa-solid fa-angle-right"></i>
             </button>
             <div class="info-box">
-              <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"  />
+              <img
+                src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
+              />
               <div class="home-scrollbar-title">Stranger Things</div>
               <div class="home-scrollbar-rating">8.62</div>
             </div>
             <div class="info-box">
-              <img src="https://image.tmdb.org/t/p/w500/9pCoqX24a6rE981fY1O3PmhiwrB.jpg"  />
+              <img
+                src="https://image.tmdb.org/t/p/w500/9pCoqX24a6rE981fY1O3PmhiwrB.jpg"
+              />
               <div class="home-scrollbar-title">The Princess</div>
               <div class="home-scrollbar-rating">8.62</div>
             </div>
             <div class="info-box">
-              <img src="https://image.tmdb.org/t/p/w500/71f3JHlJCP6V7LhHHiKZgjtFxZw.jpg"  />
+              <img
+                src="https://image.tmdb.org/t/p/w500/71f3JHlJCP6V7LhHHiKZgjtFxZw.jpg"
+              />
               <div class="home-scrollbar-title">The Terminal List</div>
               <div class="home-scrollbar-rating">8.62</div>
             </div>
             <div class="info-box">
-              <img src="https://image.tmdb.org/t/p/w500/61PVJ06oecwvcBisoAQu6SDfdcS.jpg"  />
-              <div class="home-scrollbar-title">Doctor Strange in the Multiverse of Madness</div>
+              <img
+                src="https://image.tmdb.org/t/p/w500/61PVJ06oecwvcBisoAQu6SDfdcS.jpg"
+              />
+              <div class="home-scrollbar-title">
+                Doctor Strange in the Multiverse of Madness
+              </div>
               <div class="home-scrollbar-rating">8.62</div>
             </div>
             <div class="info-box">
-              <img src="https://image.tmdb.org/t/p/w500/stTEycfG9928HYGEISBFaG1ngjM.jpg"  />
+              <img
+                src="https://image.tmdb.org/t/p/w500/stTEycfG9928HYGEISBFaG1ngjM.jpg"
+              />
               <div class="home-scrollbar-title">The Boys</div>
               <div class="home-scrollbar-rating">8.62</div>
             </div>
             <div class="info-box">
-              <img src="https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg"  />
+              <img
+                src="https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg"
+              />
               <div class="home-scrollbar-title">Minions: The Rise of Gru</div>
               <div class="home-scrollbar-rating">8.62</div>
             </div>
             <div class="info-box">
-              <img src="https://image.tmdb.org/t/p/w500/dt53jhcegkYu2hKcE4tAdnbpBzt.jpg"  />
+              <img
+                src="https://image.tmdb.org/t/p/w500/dt53jhcegkYu2hKcE4tAdnbpBzt.jpg"
+              />
               <div class="home-scrollbar-title">Code Name Banshee</div>
               <div class="home-scrollbar-rating">8.62</div>
             </div>
             <div class="info-box">
-              <img src="https://image.tmdb.org/t/p/w500/muzgYvvFniQnwiTdAvfMCEkHsT4.jpg"  />
+              <img
+                src="https://image.tmdb.org/t/p/w500/muzgYvvFniQnwiTdAvfMCEkHsT4.jpg"
+              />
               <div class="home-scrollbar-title">Baymax!</div>
               <div class="home-scrollbar-rating">8.62</div>
             </div>
           </div>
         </div>
-        <div>asd</div>
-        <div>asd</div>
+        <!-- custom scrollbar  -->
+        <!-- custom scrollbar  -->
+        <div class="custom-scrollbar-container">
+          <div class="upper-scrollbar">
+            <h3>Popular</h3>
+            <div class="upper-scrollbar-right">
+              <a href="#"> All </a>
+              <a href="#"> Movies </a>
+              <a href="#"> Tv Series </a>
+              <a href="#"> People </a>
+            </div>
+          </div>
+          <div id="custom-scrollbar-popular" class="custom-scrollbar">
+            <button id="left-scroll" onclick="scrollLeftPopular()">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button id="right-scroll" onclick="scrollRightPopular()">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+            <div class="info-box">
+              <img
+                src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
+              />
+              <div class="home-scrollbar-title">
+                Doctor Strange in the Multiverse of Madness
+              </div>
+              <div class="home-scrollbar-rating">8.62</div>
+            </div>
+            <div class="info-box">
+              <img
+                src="https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg"
+              />
+              <div class="home-scrollbar-title">Minions: The Rise of Gru</div>
+              <div class="home-scrollbar-rating">8.62</div>
+            </div>
+            <div class="info-box">
+              <img
+                src="https://image.tmdb.org/t/p/w500/jrgifaYeUtTnaH7NF5Drkgjg2MB.jpg"
+              />
+              <div class="home-scrollbar-title">
+                Fantastic Beasts: The Secrets of Dumbledore
+              </div>
+              <div class="home-scrollbar-rating">8.62</div>
+            </div>
+            <div class="info-box">
+              <img
+                src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg"
+              />
+              <div class="home-scrollbar-title">Sonic the Hedgehog 2</div>
+              <div class="home-scrollbar-rating">8.62</div>
+            </div>
+            <div class="info-box">
+              <img
+                src="https://image.tmdb.org/t/p/w500/rkpLvPDe0ZE62buUS32exdNr7zD.jpg"
+              />
+              <div class="home-scrollbar-title">Dog</div>
+              <div class="home-scrollbar-rating">8.62</div>
+            </div>
+            <div class="info-box">
+              <img
+                src="https://image.tmdb.org/t/p/w500/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
+              />
+              <div class="home-scrollbar-title">Jurassic World Dominion</div>
+              <div class="home-scrollbar-rating">8.62</div>
+            </div>
+            <div class="info-box">
+              <img
+                src="https://image.tmdb.org/t/p/w500/4zsihgkxMZ7MrflNCjkD3ySFJtc.jpg"
+              />
+              <div class="home-scrollbar-title">Collision</div>
+              <div class="home-scrollbar-rating">8.62</div>
+            </div>
+            <div class="info-box">
+              <img
+                src="https://image.tmdb.org/t/p/w500/6JjfSchsU6daXk2AKX8EEBjO3Fm.jpg"
+              />
+              <div class="home-scrollbar-title">Morbius</div>
+              <div class="home-scrollbar-rating">8.62</div>
+            </div>
+          </div>
+        </div>
+        <!-- custom scrollbar  -->
       </main>
     </div>
     <script type="module" src="./js/main.js"></script>

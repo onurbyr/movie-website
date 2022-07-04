@@ -86,12 +86,27 @@ setInterval(() => {
 //Slider---
 
 //---Custom Scrollbar
-const customScrollbar = document.querySelector(".custom-scrollbar");
-window.leftScroll = () => {
-  customScrollbar.scrollLeft -= 300;
+//Trending
+const customScrollbarTrending = document.querySelector(
+  "#custom-scrollbar-trending"
+);
+window.scrollLeftTrending = () => {
+  customScrollbarTrending.scrollLeft -= 300;
 };
 
-window.rightScroll = () => {
-  customScrollbar.scrollLeft += 300;
+window.scrollRightTrending = () => {
+  customScrollbarTrending.scrollLeft += 300;
 };
+//Popular
+const customScrollbarPopular = document.querySelector(
+  "#custom-scrollbar-popular"
+);
+window.scrollLeftPopular = () => {
+  customScrollbarPopular.scrollLeft -= 300;
+};
+
+window.scrollRightPopular = () => {
+  customScrollbarPopular.scrollLeft += 300;
+};
+
 //Custom Scrollbar---
