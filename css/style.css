@@ -306,12 +306,23 @@ a {
 
 .custom-scrollbar {
     display: flex;
-    overflow: hidden;
+    overflow: auto;
     scroll-behavior: smooth;
     align-items: center;
     --title-margin: 1rem;
     --title-fontsize: 1rem;
     --rating-fontsize: 16px;
+    /* hide overflow without overflow hidden */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    /* hide overflow without overflow hidden */
+    display: none;
+    /* Safari and Chrome */
 }
 
 .custom-scrollbar button {
