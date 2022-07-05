@@ -41,3 +41,33 @@ window.readMore = () => {
   }
 };
 //Read More---
+
+//---Genres
+const genresLeftButton = document.querySelector(".genres-side-left");
+const genresRightButton = document.querySelector(".genres-side-right");
+const detailsScrollbar = document.querySelector(".details-genres");
+
+genresLeftButton.addEventListener("click", () => {
+  detailsScrollbar.scrollLeft -= 300;
+});
+
+genresRightButton.addEventListener("click", () => {
+  detailsScrollbar.scrollLeft += 300;
+});
+
+const genres = document.querySelector(".details-genres");
+
+const isOverflown = ({
+  clientWidth,
+  clientHeight,
+  scrollWidth,
+  scrollHeight,
+}) => {
+  return scrollHeight > clientHeight || scrollWidth > clientWidth;
+};
+
+if (!isOverflown(detailsScrollbar)) {
+  genresLeftButton.style.display = "none";
+  genresRightButton.style.display = "none";
+}
+//Genres---
