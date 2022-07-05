@@ -375,6 +375,57 @@ a {
 
 /* Custom Scrollbar--- */
 
+
+/* ---Details */
+
+.details-container {
+    padding: 5vh 10%;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container-details {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40px;
+    height: 35px;
+    padding: 0 20px;
+    border-radius: 22px;
+    transition: width 0.5s ease;
+    overflow: hidden;
+}
+
+.search-container-details-active {
+    width: 200px;
+    background-color: #8D8D8B;
+
+}
+
+.search-container-details input {
+    height: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    border-style: none;
+    padding-left: 30px;
+}
+
+.search-container-details i {
+    color: #C0C0BF;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.search-container-details input:focus {
+    outline: none;
+}
+
+/* Details--- */
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px;
@@ -443,6 +494,10 @@ a {
 
     .info-box {
         flex: 0 0 100px;
+    }
+
+    .search-container-details-active {
+        width: 60%;
     }
 }
 
