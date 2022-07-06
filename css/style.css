@@ -503,6 +503,41 @@ a {
     flex-shrink: 0;
 }
 
+/* Actors */
+.actors-scroll {
+    display: flex;
+    overflow: auto;
+}
+
+.actors-card {
+    border: 0.8px solid #58575D;
+    /* width: 138px; */
+    flex: 0 0 138px;
+    --card-radius: 10px;
+    border-radius: var(--card-radius);
+    margin-right: 20px;
+
+}
+
+.card-details {
+    padding: 10px 10px 30px 10px;
+}
+
+.card-details p:nth-child(1) {
+    font-weight: bold;
+}
+
+.crop-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: var(--card-radius) var(--card-radius) 0 0;
+}
+
+.crop-container img {
+    width: 100%;
+}
+
 /* Details--- */
 
 @media screen and (max-height: 450px) {
