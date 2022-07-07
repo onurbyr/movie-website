@@ -1,3 +1,11 @@
+const isTouchDevice = () => {
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+};
+
 //---Search Container
 const detailsSearchContainer = document.querySelector(
   ".search-container-details"
@@ -70,4 +78,60 @@ if (!isOverflown(detailsScrollbar)) {
   genresLeftButton.style.display = "none";
   genresRightButton.style.display = "none";
 }
+//if touch device hide buttons
+if (isTouchDevice()) {
+  genresLeftButton.style.display = "none";
+  genresRightButton.style.display = "none";
+}
 //Genres---
+
+//---Actors
+const actorsLeftButton = document.querySelector(".actors-controls-left");
+const actorsRightButton = document.querySelector(".actors-controls-right");
+const actorsScrollbar = document.querySelector(".actors-scroll");
+let currentScrollPosition = 0;
+
+const hideActorsButton = () => {
+  //delay set for getting current scollposition properly
+  setTimeout(() => {
+    currentScrollPosition = actorsScrollbar.scrollLeft;
+    if (
+      actorsScrollbar.offsetWidth + currentScrollPosition >=
+      actorsScrollbar.scrollWidth
+    ) {
+      actorsRightButton.style.opacity = 0.2;
+      actorsRightButton.style.pointerEvents = "none";
+    }
+    if (
+      actorsScrollbar.offsetWidth + currentScrollPosition <=
+      actorsScrollbar.offsetWidth
+    ) {
+      actorsLeftButton.style.opacity = 0.2;
+      actorsLeftButton.style.pointerEvents = "none";
+    }
+  }, 400);
+};
+
+actorsLeftButton.addEventListener("click", () => {
+  actorsScrollbar.scrollLeft -= 300;
+  actorsRightButton.style.pointerEvents = "auto";
+  actorsRightButton.style.opacity = 1;
+  hideActorsButton();
+});
+
+actorsRightButton.addEventListener("click", () => {
+  actorsScrollbar.scrollLeft += 300;
+  actorsLeftButton.style.pointerEvents = "auto";
+  actorsLeftButton.style.opacity = 1;
+  hideActorsButton();
+});
+
+hideActorsButton();
+
+//if touch device hide buttons
+if (isTouchDevice()) {
+  actorsLeftButton.style.display = "none";
+  actorsRightButton.style.display = "none";
+}
+
+//Actors---
