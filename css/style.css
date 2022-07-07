@@ -37,6 +37,7 @@ body {
     --slider-text-margin-top: -90px;
     --slider-text-font-size: 2rem;
     --slider-text-padding-left: 12px;
+    --header-logo-width: 42px;
 }
 
 header {
@@ -81,7 +82,7 @@ main {
 
 
 header img {
-    width: 42px;
+    width: var(--header-logo-width);
     margin: 30px 0 20px 0;
 }
 
@@ -388,6 +389,12 @@ a {
     align-items: center;
 }
 
+.details-header img {
+    width: var(--header-logo-width);
+    /* removes 3px margin at bottom */
+    vertical-align: middle;
+}
+
 /* Search Container Details */
 .search-container-details {
     display: flex;
@@ -633,6 +640,7 @@ a {
         height: var(--mobile-header-height);
         width: 100%;
         padding: var(--header-padding-mobile);
+        position: absolute;
     }
 
     .home-container {
