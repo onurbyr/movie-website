@@ -116,6 +116,10 @@ a {
     border-right: 3px solid #159FFF;
 }
 
+.active-link-mobile * {
+    color: #159FFF;
+}
+
 /* ---Mobile Nav */
 .overlay {
     height: 100%;
@@ -643,7 +647,7 @@ a {
         position: absolute;
     }
 
-    .home-container {
+    .container {
         display: flex;
         flex-direction: column;
     }

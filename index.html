@@ -12,7 +12,7 @@
     ></script>
   </head>
   <body>
-    <div class="home-container">
+    <div class="container">
       <!-- header  -->
       <header>
         <div class="mobile-nav">
@@ -32,19 +32,19 @@
           <ul class="nav-links">
             <li class="active-link">
               <i class="fa-solid fa-layer-group"></i>
-              <a href="#">Discover</a>
+              <a href="/">Discover</a>
             </li>
             <li>
               <i class="fa-solid fa-video"></i>
-              <a href="#">Movies</a>
+              <a href="/movies.html">Movies</a>
             </li>
             <li>
               <i class="fa-solid fa-tv"></i>
-              <a href="#">Tv Series</a>
+              <a href="/tv.html">Tv Series</a>
             </li>
             <li>
               <i class="fa-solid fa-users"></i>
-              <a href="#">People</a>
+              <a href="/people.html">People</a>
             </li>
           </ul>
         </nav>
@@ -52,21 +52,21 @@
       <div id="mobile-menu" class="overlay">
         <a class="close">&times;</a>
         <div class="overlay-content">
-          <div>
+          <div class="active-link-mobile">
             <i class="fa-solid fa-layer-group"></i>
-            <a href="#">Discover</a>
+            <a href="/">Discover</a>
           </div>
           <div>
             <i class="fa-solid fa-video"></i>
-            <a href="#">Movies</a>
+            <a href="/movies.html">Movies</a>
           </div>
           <div>
             <i class="fa-solid fa-tv"></i>
-            <a href="#">TvSeries</a>
+            <a href="/tv.html">TvSeries</a>
           </div>
           <div>
             <i class="fa-solid fa-users"></i>
-            <a href="#">People</a>
+            <a href="/people.html">People</a>
           </div>
         </div>
       </div>
@@ -268,6 +268,7 @@
         <!-- custom scrollbar  -->
       </main>
     </div>
+    <script type="module" src="./js/header.js"></script>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
