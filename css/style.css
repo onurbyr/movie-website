@@ -446,8 +446,19 @@ a {
     overflow: hidden;
 }
 
-.details-image-right h1 {
+.details-image-right-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details-image-right-top h1 {
     margin: 0.8rem 0;
+}
+
+.details-image-right-top i {
+    color: #C99C30;
+    font-size: 1.1rem;
 }
 
 #more {
@@ -495,10 +506,11 @@ a {
 }
 
 .genre-boxes {
+    --padding: 0.6rem;
     background-color: #222227;
-    padding: 10px 20px;
+    padding: var(--padding) 1.2rem;
     margin-right: 20px;
-    border-radius: 20px;
+    border-radius: calc(2 * var(--padding));
     border: 2px solid #58575D;
     flex-shrink: 0;
 }
@@ -558,15 +570,28 @@ a {
 }
 
 .card-details {
-    padding: 10px 10px 30px 10px;
+    padding: 10px 10px 20px 10px;
+    /* added ... if more than one line  */
+    display: table;
+    table-layout: fixed;
+    width: 100%;
 }
 
 .card-details p:nth-child(1) {
     font-weight: bold;
+    /* added ... if more than one line  */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 .card-details p:nth-child(2) {
     color: #FFFFFFB3;
+    /* added ... if more than one line  */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .crop-container {
@@ -668,6 +693,26 @@ a {
         width: 50%;
         border-radius: 0;
         align-self: center;
+    }
+
+    .details-image-right {
+        padding: 0;
+    }
+
+    .actors-card {
+        flex: 0 0 100px;
+    }
+
+    .crop-container {
+        height: 120px;
+    }
+
+    .card-details p:nth-child(1) {
+        font-size: 0.8rem
+    }
+
+    .card-details p:nth-child(2) {
+        font-size: 0.8rem
     }
 }
 
