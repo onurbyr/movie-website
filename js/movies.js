@@ -32,13 +32,13 @@ const hideGenresButton = () => {
 };
 
 genresLeftButton.addEventListener("click", () => {
-  genresScrollBar.scrollLeft -= 600;
+  genresScrollBar.scrollLeft -= 400;
   genresRightButton.style.display = "flex";
   hideGenresButton();
 });
 
 genresRightButton.addEventListener("click", () => {
-  genresScrollBar.scrollLeft += 600;
+  genresScrollBar.scrollLeft += 400;
   genresLeftButton.style.display = "flex";
   hideGenresButton();
 });
@@ -50,5 +50,18 @@ if (isTouchDevice()) {
   genresLeftButton.style.display = "none";
   genresRightButton.style.display = "none";
 }
+
+//enable mouse scroll
+genresScrollBar.addEventListener("wheel", (e) => {
+  if (e.deltaY > 0) {
+    genresScrollBar.scrollLeft += 200;
+    genresLeftButton.style.display = "flex";
+  } else {
+    genresScrollBar.scrollLeft -= 200;
+    genresRightButton.style.display = "flex";
+  }
+
+  hideGenresButton();
+});
 
 //Genres---
