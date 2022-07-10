@@ -618,6 +618,49 @@ a {
 
 /* Details--- */
 
+/* ---Movies */
+.list {
+    padding: 5vh 5%;
+}
+
+.list-top {
+    display: flex;
+    align-items: center;
+}
+
+#select-category {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #323336;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 20px;
+    margin-left: 2rem;
+    padding: 0.7rem 1rem;
+    /* set width of select box  */
+    padding-right: 7%;
+    font-family: "Times New Roman", Times, serif;
+    transition: background-color .5s ease;
+}
+
+#select-category option {
+    background-color: #515151;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#select-category:hover {
+    background-color: #1b1b1b;
+}
+
+
+/* Movies--- */
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px;
