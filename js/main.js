@@ -1,19 +1,3 @@
-import ColorThief from "./color-thief.mjs"; //Component for getting dominant color of image
-
-//Get dominant color
-const colorThief = new ColorThief();
-const getDominantColor = (img) => {
-  // Make sure image is finished loading
-  if (img.complete) {
-    return colorThief.getColor(img);
-  } else {
-    img.addEventListener("load", function () {
-      return colorThief.getColor(img);
-    });
-  }
-};
-//Get dominant color
-
 //---Slider
 let slideIndex = 1;
 window.plusSlides = (n) => {
@@ -42,17 +26,11 @@ const showSlides = (n) => {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  //setting dominant color of image as background
-  const img = slides[slideIndex - 1].querySelector("img");
-  let rgb = getDominantColor(img);
-  slides[slideIndex - 1].style.backgroundColor =
-    "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")";
-  //setting dominant color of image as background
 };
 
 showSlides(slideIndex);
 
-// Run every each 2 seconds
+// Run every 3 seconds
 setInterval(() => {
   plusSlides(1);
 }, 3000);
