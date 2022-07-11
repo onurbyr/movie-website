@@ -125,7 +125,7 @@ a {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     left: 0;
     top: 0;
     background-color: #030303;
@@ -734,6 +734,43 @@ a {
     color: #030303;
 }
 
+.list-items-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-item {
+    --margin-value: 3%;
+    margin: 0 var(--margin-value) var(--margin-value) 0;
+    flex: 0 0 calc(33.333333% - 1 * var(--margin-value));
+    background-color: #1B2530;
+}
+
+.list-item-image {
+    width: 100%;
+}
+
+.list-item-details {
+    margin: 1rem
+}
+
+.list-item-details .item-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.list-item-details-year-rating {
+    display: flex;
+    /*#8197A4 */
+    filter: invert(61%) sepia(34%) saturate(194%) hue-rotate(158deg) brightness(91%) contrast(84%);
+}
+
+.list-item-details-year-rating img {
+    width: 60px;
+    margin: 0 .3rem 0 1rem;
+}
+
 
 /* Movies--- */
 
@@ -746,6 +783,12 @@ a {
         font-size: 40px;
         top: 15px;
         right: 35px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .list-item {
+        flex: 0 0 calc(50% - 1 * var(--margin-value));
     }
 }
 
@@ -846,10 +889,8 @@ a {
     .card-details p:nth-child(2) {
         font-size: 0.8rem
     }
-}
 
-@media only screen and (max-width: 1280px) {
-    .mySlides img {
-        padding: 0;
+    .list-item {
+        flex: 0 0 calc(100% - 1 * var(--margin-value));
     }
 }
