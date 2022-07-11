@@ -61,4 +61,13 @@ window.scrollRightPopular = () => {
   customScrollbarPopular.scrollLeft += 300;
 };
 
+//href details
+const infoBoxImage = document.querySelectorAll(".info-box img");
+infoBoxImage.forEach((e) => {
+  e.style.cursor = "pointer";
+  e.addEventListener("click", () => {
+    location.href = "./details.html";
+  });
+});
+
 //Custom Scrollbar---
