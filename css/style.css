@@ -771,6 +771,24 @@ a {
     margin: 0 .3rem 0 1rem;
 }
 
+.pagination-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-box {
+    background: #292b33;
+    padding: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.pagination-box:hover {
+    background: #1B2530;
+}
+
+.active-page {
+    background: #1B2530;
+}
 
 /* Movies--- */
 
