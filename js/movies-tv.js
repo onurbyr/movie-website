@@ -53,6 +53,7 @@ if (isTouchDevice()) {
 
 //enable mouse scroll
 genresScrollBar.addEventListener("wheel", (e) => {
+  e.preventDefault();
   if (e.deltaY > 0) {
     genresScrollBar.scrollLeft += 200;
     genresLeftButton.style.display = "flex";

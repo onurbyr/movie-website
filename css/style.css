@@ -825,6 +825,48 @@ a {
 
 /* Movies--- */
 
+/* ---People Details */
+
+.people-details-content {
+    display: flex;
+    margin: 3vh 0;
+}
+
+.personal-info {
+    flex: 0 0 300px;
+    margin-right: 30px;
+}
+
+.personal-info img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.personal-info-text {
+    margin: 2vh 0;
+    font-size: 1.3rem;
+}
+
+.personal-info-items {
+    margin-bottom: 20px;
+}
+
+.personal-info-items p {
+    color: #AAAAAA;
+}
+
+.personal-info-items ul {
+    list-style-type: none;
+}
+
+.personal-info-items ul li {
+    color: #AAAAAA;
+    margin-bottom: 0.5rem;
+
+}
+
+/* People Details--- */
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px;
