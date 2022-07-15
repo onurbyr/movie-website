@@ -165,11 +165,9 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                             <div
                               class="people-details-circle"
-                              onclick="togglePopup()"
+                              onclick="togglePopup(this)"
                             >
-                              <span class="popup" id="myPopup"
-                                >A Simple Popup!</span
-                              >
+                              <span class="popup">A Simple Popup!</span>
                             </div>
                           </td>
                           <td class="name">
@@ -180,7 +178,12 @@
                         <tr>
                           <td class="year">-</td>
                           <td class="separator">
-                            <i class="fa-regular fa-circle"></i>
+                            <div
+                              class="people-details-circle"
+                              onclick="togglePopup(this)"
+                            >
+                              <span class="popup">A Simple Popup!</span>
+                            </div>
                           </td>
                           <td class="name">
                             Phase 2 Tag Scenes: A Making of the Marvel Cinematic

@@ -985,10 +985,11 @@ table {
 
 /* Popup */
 .people-details-circle .popup {
+    --popup-width: 450px;
     visibility: hidden;
-    width: 160px;
+    width: var(--popup-width);
+    height: 150px;
     background-color: #555;
-    color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
@@ -996,7 +997,7 @@ table {
     z-index: 1;
     bottom: 125%;
     left: 50%;
-    margin-left: -80px;
+    margin-left: calc(-1 * var(--popup-width) / 2);
 }
 
 /* Popup arrow */

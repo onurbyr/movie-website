@@ -11,18 +11,27 @@ detailsSearchButton.addEventListener("click", () => {
 //Search Container---
 
 //---Popup
-const popup = document.getElementById("myPopup");
-window.togglePopup = () => {
-  popup.classList.toggle("show");
+const popup = document.querySelectorAll(".people-details-circle");
+window.togglePopup = (e) => {
+  popup.forEach((p) => {
+    if (p === e) {
+      p.querySelector(".popup").classList.add("show");
+    } else {
+      p.querySelector(".popup").classList.remove("show");
+    }
+  });
 };
 
-// detect page click except circle
-const ignoreClickOnMeElement = document.querySelector(".people-details-circle");
+// detect page click except circle and popup
 document.addEventListener("click", (event) => {
-  let isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
+  let isClickInsideElement =
+    event.target.classList.contains("people-details-circle") ||
+    event.target.classList.contains("popup");
   if (!isClickInsideElement) {
-    //Do something click is outside specified element
-    popup.classList.remove("show");
+    // Do something click is outside specified element
+    popup.forEach((p) => {
+      p.querySelector(".popup").classList.remove("show");
+    });
   }
 });
 //Popup---
