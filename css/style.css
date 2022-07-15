@@ -865,6 +865,10 @@ a {
     margin-bottom: 0.5rem;
 }
 
+.people-details-right h3:nth-of-type(1) {
+    margin-bottom: 0.5rem;
+}
+
 .people-details-name {
     margin-bottom: 2vh;
 }
@@ -916,7 +920,49 @@ a {
 .people-details-scroll::-webkit-scrollbar-thumb:hover {
     background: #717171;
 }
+
 /* custom scrollbar--- */
+
+/* ---table */
+
+table {
+    width: 100%;
+    background-color: #1b1c22;
+}
+
+.credit-group {
+    background-color: var(--main-background-color);
+    padding: 10px;
+}
+
+.credit-group tr {
+    height: 5vh;
+}
+
+.year {
+    width: 50px;
+    text-align: center;
+}
+
+.separator {
+    width: 30px;
+    text-align: center;
+}
+
+.separator i {
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.name {
+    padding: 0 15px;
+}
+
+.name span {
+    color: var(--secondary-color);
+}
+
+/* table--- */
 
 
 
