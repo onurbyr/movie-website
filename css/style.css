@@ -990,14 +990,14 @@ table {
     width: var(--popup-width);
     height: 150px;
     background-color: #555;
-    text-align: center;
     border-radius: 6px;
-    padding: 8px 0;
+    padding: 12px;
     position: absolute;
     z-index: 1;
     bottom: 125%;
     left: 50%;
     margin-left: calc(-1 * var(--popup-width) / 2);
+    display: flex;
 }
 
 /* Popup arrow */
@@ -1038,6 +1038,22 @@ table {
     to {
         opacity: 1;
     }
+}
+
+
+.popup-right {
+    margin-left: 10px;
+    text-align: left;
+}
+
+.popup-right h5 {
+    color: var(--secondary-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* number of lines to show */
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 
