@@ -830,6 +830,7 @@ a {
 .people-details-content {
     display: flex;
     margin: 3vh 0;
+    --secondary-color: #AAAAAA
 }
 
 .personal-info {
@@ -852,7 +853,7 @@ a {
 }
 
 .personal-info-items p {
-    color: #AAAAAA;
+    color: var(--secondary-color);
 }
 
 .personal-info-items ul {
@@ -860,10 +861,18 @@ a {
 }
 
 .personal-info-items ul li {
-    color: #AAAAAA;
+    color: var(--secondary-color);
     margin-bottom: 0.5rem;
-
 }
+
+.people-details-name {
+    margin-bottom: 2vh;
+}
+
+.people-details-name-mobile {
+    display: none;
+}
+
 
 /* People Details--- */
 
@@ -993,6 +1002,38 @@ a {
 
     .list-item-people {
         flex: 0 0 calc(33.333333% - 1 * var(--margin-value));
+    }
+
+    .people-details-content {
+        flex-direction: column;
+        margin: 3vh 0;
+    }
+
+    .personal-info {
+        flex: 0 0 100%;
+        margin-right: 0;
+    }
+
+    .people-details-name {
+        display: none;
+    }
+
+    .people-details-name-mobile {
+        display: block;
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    .personal-info img {
+        width: 50%;
+        border-radius: 20px;
+        /* align self center */
+        display: block;
+        margin: 0 auto;
+    }
+
+    .also-known-as {
+        display: none;
     }
 }
 
