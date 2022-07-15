@@ -873,6 +873,52 @@ a {
     display: none;
 }
 
+.people-details-scroll-container {
+    margin: 3vh 0;
+}
+
+.people-details-scroll {
+    display: flex;
+    overflow: auto;
+}
+
+.people-details-scroll-item {
+    margin: 0.5vh 10px;
+    flex: 0 0 150px;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.people-details-scroll-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.people-details-scroll-item p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* number of lines to show */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* ---custom scrollbar */
+.people-details-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.people-details-scroll::-webkit-scrollbar-thumb {
+    background: #AAAAAA;
+    border-radius: 10px;
+}
+
+.people-details-scroll::-webkit-scrollbar-thumb:hover {
+    background: #717171;
+}
+/* custom scrollbar--- */
+
+
 
 /* People Details--- */
 
