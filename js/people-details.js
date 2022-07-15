@@ -21,10 +21,25 @@ window.togglePopup = (e) => {
 };
 
 // detect page click except circle and popup
+const peopleDetailsCircle = document.querySelector(".people-details-circle");
+const childs = peopleDetailsCircle.getElementsByTagName("*");
+let isClickInsideElement = false;
+
 document.addEventListener("click", (event) => {
-  let isClickInsideElement =
-    event.target.classList.contains("people-details-circle") ||
-    event.target.classList.contains("popup");
+  let checkFalseCount = 0;
+  for (let i = 0; i < childs.length; i++) {
+    if (
+      event.target.classList.contains(childs[i].className) ||
+      event.target.classList.contains("people-details-circle")
+    ) {
+      isClickInsideElement = true;
+    } else {
+      checkFalseCount++;
+    }
+  }
+  if (checkFalseCount === childs.length) {
+    isClickInsideElement = false;
+  }
   if (!isClickInsideElement) {
     // Do something click is outside specified element
     if (previousElement) {

@@ -1046,7 +1046,7 @@ table {
     text-align: left;
 }
 
-.popup-right h5 {
+.popup-right .popup-description {
     color: var(--secondary-color);
     overflow: hidden;
     text-overflow: ellipsis;
