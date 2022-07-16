@@ -28,9 +28,11 @@ let isClickInsideElement = false;
 document.addEventListener("click", (event) => {
   let checkFalseCount = 0;
   for (let i = 0; i < childs.length; i++) {
+    const element = childs[i];
     if (
-      event.target.classList.contains(childs[i].className) ||
-      event.target.classList.contains("people-details-circle")
+      element.outerHTML === event.target.outerHTML ||
+      event.target.classList.contains("people-details-circle") ||
+      event.target.classList.contains("show")
     ) {
       isClickInsideElement = true;
     } else {
@@ -47,4 +49,20 @@ document.addEventListener("click", (event) => {
     }
   }
 });
+
+// detect page click except circle and popup -- 2nd way --
+// const peopleDetailsCircle = document.querySelector(".people-details-circle");
+
+// document.addEventListener("click", (event) => {
+//   let isClickInsideElement =
+//     peopleDetailsCircle.outerHTML.includes(event.target.outerHTML) ||
+//     event.target.classList.contains("people-details-circle") ||
+//     event.target.classList.contains("show");
+//   if (!isClickInsideElement) {
+//     if (previousElement) {
+//       previousElement.querySelector(".popup").classList.remove("show");
+//     }
+//   }
+// });
+
 //Popup---
