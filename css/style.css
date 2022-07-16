@@ -1222,6 +1222,10 @@ table {
     .also-known-as {
         display: none;
     }
+
+    .separator {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {

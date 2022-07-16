@@ -66,3 +66,12 @@ document.addEventListener("click", (event) => {
 // });
 
 //Popup---
+
+//href details
+let scrollItem = document.querySelectorAll(".people-details-scroll-item img");
+scrollItem.forEach((item) => {
+  item.style.cursor = "pointer";
+  item.addEventListener("click", () => {
+    location.href = "./details.html";
+  });
+});
